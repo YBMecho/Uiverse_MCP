@@ -1,0 +1,357 @@
+<div class="react-responsive-modal-modal w-full flex flex-col max-w-[900px] max-h-full pt-4 rounded-xl overflow-hidden bg-dark-700"
+    role="dialog" aria-modal="true" data-testid="modal" tabindex="-1"
+    style="animation: 300ms ease 0s 1 normal none running react-responsive-modal-modal-in;">
+    <div class="flex items-center gap-2 mb-2 mt-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            class="w-6 h-6 text-[#61DBFB]" fill="none" stroke="currentColor" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="2">
+            <path d="M22 12c0 2.21-4.477 4-10 4S2 14.21 2 12s4.477-4 10-4 10 1.79 10 4Z"></path>
+            <path
+                d="M17 20.66c-1.913 1.105-5.703-1.877-8.464-6.66C5.774 9.217 5.086 4.444 7 3.34c1.913-1.105 5.703 1.877 8.464 6.66S18.913 19.555 17 20.66Z">
+            </path>
+            <path
+                d="M7 20.66c1.913 1.105 5.702-1.877 8.464-6.66C18.225 9.217 18.913 4.444 17 3.34 15.087 2.235 11.297 5.217 8.536 10 5.774 14.783 5.086 19.556 7 20.66Z">
+            </path>
+            <path d="M13 12a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+        </svg>
+        <h2 class="font-display text-xl text-offwhite font-semibold">React</h2>
+    </div>
+    <div class="pr-8 flex items-center mb-3">
+        <div class="text-offwhite leading-loose text-sm">This snippet is using <a
+                href="https://styled-components.com?ref=Uiverse.io" target="_blank" rel="noopener"
+                class="text-indigo-400 underline underline-offset-2 inline-flex items-center gap-2">styled-components</a>.
+            Install it with <code class="bg-dark-600 px-2 py-1 rounded whitespace-nowrap">npm i styled-components</code>
+            or <code class="bg-dark-600 px-2 py-1 rounded whitespace-nowrap">yarn add styled-components</code>, or copy
+            the styles to your own CSS file for this code to work.</div>
+    </div>
+    <div class="relative"><button class="copy-all absolute top-4 right-4"><svg xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="2">
+                <path
+                    d="M16 4.038V4c0-.465 0-.697-.051-.888a1.5 1.5 0 0 0-1.06-1.06C14.697 2 14.464 2 14 2h-4c-.465 0-.697 0-.888.051a1.5 1.5 0 0 0-1.06 1.06C8 3.304 8 3.536 8 4v.038m8 0c0 .44-.001.665-.051.85a1.5 1.5 0 0 1-1.06 1.06C14.697 6 14.464 6 14 6h-4c-.465 0-.697 0-.888-.051a1.5 1.5 0 0 1-1.06-1.06C8.001 4.702 8 4.477 8 4.038m8 0c.784.047 1.34.155 1.816.397a4 4 0 0 1 1.748 1.748C20 7.04 20 8.16 20 10.4v5.2c0 2.24 0 3.36-.436 4.216a4 4 0 0 1-1.748 1.748C16.96 22 15.84 22 13.6 22h-3.2c-2.24 0-3.36 0-4.216-.436a4 4 0 0 1-1.748-1.748C4 18.96 4 17.84 4 15.6v-5.2c0-2.24 0-3.36.436-4.216a4 4 0 0 1 1.748-1.748c.475-.242 1.032-.35 1.816-.398">
+                </path>
+            </svg><span class="copy-all__text">Copy</span></button></div>
+    <div class="h-[500px] overflow-y-auto custom-scrollbar bg-[#1e1e1e] rounded-md">
+        <div class="editor editor--html language-jsx editor"
+            style="position: relative; text-align: left; box-sizing: border-box; padding: 0px; overflow: hidden; font-size: 16px; font-family: Menlo, Monaco, Consolas, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace;">
+            <pre aria-hidden="true"
+                style="margin: 0px; border: 0px; background: none; box-sizing: inherit; display: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-ligatures: inherit; font-weight: inherit; letter-spacing: inherit; line-height: inherit; tab-size: inherit; text-indent: inherit; text-rendering: inherit; text-transform: inherit; white-space: pre-wrap; word-break: keep-all; overflow-wrap: break-word; position: relative; pointer-events: none; padding: 16px;"><span class="editorLineNumber">1</span><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="editorLineNumber">2</span><span class="token keyword">import</span> styled <span class="token keyword">from</span> <span class="token string">'styled-components'</span><span class="token punctuation">;</span>
+<span class="editorLineNumber">3</span>
+<span class="editorLineNumber">4</span><span class="token keyword">const</span> <span class="token function-variable function">Button</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+<span class="editorLineNumber">5</span>  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+<span class="editorLineNumber">6</span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">StyledWrapper</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+<span class="editorLineNumber">7</span>      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">className</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+<span class="editorLineNumber">8</span>        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">Get started</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+<span class="editorLineNumber">9</span>      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+<span class="editorLineNumber">10</span>    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">StyledWrapper</span></span><span class="token punctuation">&gt;</span></span>
+<span class="editorLineNumber">11</span>  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="editorLineNumber">12</span><span class="token punctuation">}</span>
+<span class="editorLineNumber">13</span>
+<span class="editorLineNumber">14</span><span class="token keyword">const</span> StyledWrapper <span class="token operator">=</span> styled<span class="token punctuation">.</span>div<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+<span class="editorLineNumber">15</span>  .btn {
+<span class="editorLineNumber">16</span>    --fancy-button-gradient-0: #8d49fd;
+<span class="editorLineNumber">17</span>    --fancy-button-gradient-50: #7f56f3;
+<span class="editorLineNumber">18</span>    --fancy-button-gradient-100: #5691f3;
+<span class="editorLineNumber">19</span>    --fancy-button-inner-shadow-top: rgba(233, 209, 255, 0.2);
+<span class="editorLineNumber">20</span>    --fancy-button-inner-shadow-top-lg: rgba(9, 12, 60, 0.1);
+<span class="editorLineNumber">21</span>    --fancy-button-inner-shadow-bottom: rgba(137, 222, 246, 0.3);
+<span class="editorLineNumber">22</span>    --fancy-button-shine-top: #e9d1ff;
+<span class="editorLineNumber">23</span>    --fancy-button-shine-bottom: #adfff9;
+<span class="editorLineNumber">24</span>    font-weight: 500;
+<span class="editorLineNumber">25</span>    font-size: 15px;
+<span class="editorLineNumber">26</span>    line-height: 21px;
+<span class="editorLineNumber">27</span>    text-shadow: 0px 0.5px 0.5px rgba(0, 0, 0, 0.2);
+<span class="editorLineNumber">28</span>    padding: 0;
+<span class="editorLineNumber">29</span>    margin: 0;
+<span class="editorLineNumber">30</span>    appearance: none;
+<span class="editorLineNumber">31</span>    border: none;
+<span class="editorLineNumber">32</span>    outline: none;
+<span class="editorLineNumber">33</span>    overflow: hidden;
+<span class="editorLineNumber">34</span>    position: relative;
+<span class="editorLineNumber">35</span>    cursor: pointer;
+<span class="editorLineNumber">36</span>    z-index: 1;
+<span class="editorLineNumber">37</span>    border-radius: 25px;
+<span class="editorLineNumber">38</span>    color: #fff;
+<span class="editorLineNumber">39</span>    background-image: linear-gradient(
+<span class="editorLineNumber">40</span>      to bottom,
+<span class="editorLineNumber">41</span>      var(--fancy-button-gradient-0) 0%,
+<span class="editorLineNumber">42</span>      var(--fancy-button-gradient-50) 50%,
+<span class="editorLineNumber">43</span>      var(--fancy-button-gradient-100) 100%
+<span class="editorLineNumber">44</span>    );
+<span class="editorLineNumber">45</span>    box-shadow:
+<span class="editorLineNumber">46</span>      0px 4px 12px rgba(9, 12, 60, 0.15),
+<span class="editorLineNumber">47</span>      0px 2px 8px rgba(9, 12, 60, 0.15),
+<span class="editorLineNumber">48</span>      0px 1px 3px var(--fancy-button-inner-shadow-top-lg),
+<span class="editorLineNumber">49</span>      inset 0px 1px 1px var(--fancy-button-inner-shadow-top),
+<span class="editorLineNumber">50</span>      inset 0px -1px 3px var(--fancy-button-inner-shadow-bottom);
+<span class="editorLineNumber">51</span>  }
+<span class="editorLineNumber">52</span>
+<span class="editorLineNumber">53</span>  .btn:before,
+<span class="editorLineNumber">54</span>  .btn:after {
+<span class="editorLineNumber">55</span>    content: "";
+<span class="editorLineNumber">56</span>    position: absolute;
+<span class="editorLineNumber">57</span>    border-radius: inherit;
+<span class="editorLineNumber">58</span>    will-change: transform;
+<span class="editorLineNumber">59</span>  }
+<span class="editorLineNumber">60</span>
+<span class="editorLineNumber">61</span>  .btn:before {
+<span class="editorLineNumber">62</span>    left: 50%;
+<span class="editorLineNumber">63</span>    transform: translateX(-50%);
+<span class="editorLineNumber">64</span>    background-color: var(--fancy-button-shine-top);
+<span class="editorLineNumber">65</span>    width: 96px;
+<span class="editorLineNumber">66</span>    height: 6px;
+<span class="editorLineNumber">67</span>    top: -3px;
+<span class="editorLineNumber">68</span>    opacity: 0.6;
+<span class="editorLineNumber">69</span>    filter: blur(6px);
+<span class="editorLineNumber">70</span>    transition: opacity 0.25s;
+<span class="editorLineNumber">71</span>  }
+<span class="editorLineNumber">72</span>
+<span class="editorLineNumber">73</span>  .btn:after {
+<span class="editorLineNumber">74</span>    inset: 0;
+<span class="editorLineNumber">75</span>    background-size: cover;
+<span class="editorLineNumber">76</span>    z-index: 2;
+<span class="editorLineNumber">77</span>    opacity: 0.3;
+<span class="editorLineNumber">78</span>    mix-blend-mode: overlay;
+<span class="editorLineNumber">79</span>    pointer-events: none;
+<span class="editorLineNumber">80</span>  }
+<span class="editorLineNumber">81</span>
+<span class="editorLineNumber">82</span>  .btn span {
+<span class="editorLineNumber">83</span>    display: block;
+<span class="editorLineNumber">84</span>    padding: 12px 24px;
+<span class="editorLineNumber">85</span>    border-radius: inherit;
+<span class="editorLineNumber">86</span>    overflow: hidden;
+<span class="editorLineNumber">87</span>    position: relative;
+<span class="editorLineNumber">88</span>    background-image: linear-gradient(
+<span class="editorLineNumber">89</span>      to bottom,
+<span class="editorLineNumber">90</span>      var(--fancy-button-shine-top),
+<span class="editorLineNumber">91</span>      transparent 8px
+<span class="editorLineNumber">92</span>    );
+<span class="editorLineNumber">93</span>    background-position: 0 -6px;
+<span class="editorLineNumber">94</span>    background-repeat: no-repeat;
+<span class="editorLineNumber">95</span>    z-index: 1;
+<span class="editorLineNumber">96</span>  }
+<span class="editorLineNumber">97</span>
+<span class="editorLineNumber">98</span>  .btn span:before,
+<span class="editorLineNumber">99</span>  .btn span:after {
+<span class="editorLineNumber">100</span>    content: "";
+<span class="editorLineNumber">101</span>    position: absolute;
+<span class="editorLineNumber">102</span>    left: 50%;
+<span class="editorLineNumber">103</span>    transform: translateX(-50%);
+<span class="editorLineNumber">104</span>    border-radius: 50%;
+<span class="editorLineNumber">105</span>    background-color: var(--fancy-button-shine-bottom);
+<span class="editorLineNumber">106</span>    transition:
+<span class="editorLineNumber">107</span>      opacity 0.25s,
+<span class="editorLineNumber">108</span>      transform 0.25s;
+<span class="editorLineNumber">109</span>    will-change: transform;
+<span class="editorLineNumber">110</span>  }
+<span class="editorLineNumber">111</span>
+<span class="editorLineNumber">112</span>  .btn span:before {
+<span class="editorLineNumber">113</span>    width: 92px;
+<span class="editorLineNumber">114</span>    height: 8px;
+<span class="editorLineNumber">115</span>    bottom: -4px;
+<span class="editorLineNumber">116</span>    opacity: 0.75;
+<span class="editorLineNumber">117</span>    filter: blur(6px);
+<span class="editorLineNumber">118</span>  }
+<span class="editorLineNumber">119</span>
+<span class="editorLineNumber">120</span>  .btn span:after {
+<span class="editorLineNumber">121</span>    width: 112px;
+<span class="editorLineNumber">122</span>    height: 1px;
+<span class="editorLineNumber">123</span>    bottom: 0;
+<span class="editorLineNumber">124</span>    opacity: 0.9;
+<span class="editorLineNumber">125</span>    filter: blur(1px);
+<span class="editorLineNumber">126</span>  }
+<span class="editorLineNumber">127</span>
+<span class="editorLineNumber">128</span>  .btn:hover span:before {
+<span class="editorLineNumber">129</span>    opacity: 0.8;
+<span class="editorLineNumber">130</span>  }
+<span class="editorLineNumber">131</span>
+<span class="editorLineNumber">132</span>  .btn:hover span:before {
+<span class="editorLineNumber">133</span>    transform: translateX(-50%) scale(1.25);
+<span class="editorLineNumber">134</span>  }
+<span class="editorLineNumber">135</span>
+<span class="editorLineNumber">136</span>  .btn:hover span:after {
+<span class="editorLineNumber">137</span>    opacity: 1;
+<span class="editorLineNumber">138</span>  }</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+<span class="editorLineNumber">139</span>
+<span class="editorLineNumber">140</span><span class="token keyword">export</span> <span class="token keyword">default</span> Button<span class="token punctuation">;</span>
+<span class="editorLineNumber">141</span><br></pre><textarea class="npm__react-simple-code-editor__textarea"
+                id="codeArea2" name="code" readonly="" autocapitalize="off" autocomplete="off" autocorrect="off"
+                spellcheck="false" data-gramm="false"
+                style="margin: 0px; border: 0px; background: none; box-sizing: inherit; display: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-ligatures: inherit; font-weight: inherit; letter-spacing: inherit; line-height: inherit; tab-size: inherit; text-indent: inherit; text-rendering: inherit; text-transform: inherit; white-space: pre-wrap; word-break: keep-all; overflow-wrap: break-word; position: absolute; top: 0px; left: 0px; height: 100%; width: 100%; resize: none; color: inherit; overflow: hidden; -webkit-font-smoothing: antialiased; -webkit-text-fill-color: transparent; padding: 16px;">import React from 'react';
+import styled from 'styled-components';
+
+const Button = () =&gt; {
+  return (
+    &lt;StyledWrapper&gt;
+      &lt;button className="btn"&gt;
+        &lt;span&gt;Get started&lt;/span&gt;
+      &lt;/button&gt;
+    &lt;/StyledWrapper&gt;
+  );
+}
+
+const StyledWrapper = styled.div`
+  .btn {
+    --fancy-button-gradient-0: #8d49fd;
+    --fancy-button-gradient-50: #7f56f3;
+    --fancy-button-gradient-100: #5691f3;
+    --fancy-button-inner-shadow-top: rgba(233, 209, 255, 0.2);
+    --fancy-button-inner-shadow-top-lg: rgba(9, 12, 60, 0.1);
+    --fancy-button-inner-shadow-bottom: rgba(137, 222, 246, 0.3);
+    --fancy-button-shine-top: #e9d1ff;
+    --fancy-button-shine-bottom: #adfff9;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 21px;
+    text-shadow: 0px 0.5px 0.5px rgba(0, 0, 0, 0.2);
+    padding: 0;
+    margin: 0;
+    appearance: none;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 25px;
+    color: #fff;
+    background-image: linear-gradient(
+      to bottom,
+      var(--fancy-button-gradient-0) 0%,
+      var(--fancy-button-gradient-50) 50%,
+      var(--fancy-button-gradient-100) 100%
+    );
+    box-shadow:
+      0px 4px 12px rgba(9, 12, 60, 0.15),
+      0px 2px 8px rgba(9, 12, 60, 0.15),
+      0px 1px 3px var(--fancy-button-inner-shadow-top-lg),
+      inset 0px 1px 1px var(--fancy-button-inner-shadow-top),
+      inset 0px -1px 3px var(--fancy-button-inner-shadow-bottom);
+  }
+
+  .btn:before,
+  .btn:after {
+    content: "";
+    position: absolute;
+    border-radius: inherit;
+    will-change: transform;
+  }
+
+  .btn:before {
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--fancy-button-shine-top);
+    width: 96px;
+    height: 6px;
+    top: -3px;
+    opacity: 0.6;
+    filter: blur(6px);
+    transition: opacity 0.25s;
+  }
+
+  .btn:after {
+    inset: 0;
+    background-size: cover;
+    z-index: 2;
+    opacity: 0.3;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+  }
+
+  .btn span {
+    display: block;
+    padding: 12px 24px;
+    border-radius: inherit;
+    overflow: hidden;
+    position: relative;
+    background-image: linear-gradient(
+      to bottom,
+      var(--fancy-button-shine-top),
+      transparent 8px
+    );
+    background-position: 0 -6px;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+
+  .btn span:before,
+  .btn span:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background-color: var(--fancy-button-shine-bottom);
+    transition:
+      opacity 0.25s,
+      transform 0.25s;
+    will-change: transform;
+  }
+
+  .btn span:before {
+    width: 92px;
+    height: 8px;
+    bottom: -4px;
+    opacity: 0.75;
+    filter: blur(6px);
+  }
+
+  .btn span:after {
+    width: 112px;
+    height: 1px;
+    bottom: 0;
+    opacity: 0.9;
+    filter: blur(1px);
+  }
+
+  .btn:hover span:before {
+    opacity: 0.8;
+  }
+
+  .btn:hover span:before {
+    transform: translateX(-50%) scale(1.25);
+  }
+
+  .btn:hover span:after {
+    opacity: 1;
+  }`;
+
+export default Button;
+</textarea>
+            <style>
+                /**
+ * Reset the text fill color so that placeholder is visible
+ */
+                .npm__react-simple-code-editor__textarea:empty {
+                    -webkit-text-fill-color: inherit !important;
+                }
+
+                /**
+ * Hack to apply on some CSS on IE10 and IE11
+ */
+                @media all and (-ms-high-contrast: none),
+                (-ms-high-contrast: active) {
+
+                    /**
+    * IE doesn't support '-webkit-text-fill-color'
+    * So we use 'color: transparent' to make the text transparent on IE
+    * Unlike other browsers, it doesn't affect caret color in IE
+    */
+                    .npm__react-simple-code-editor__textarea {
+                        color: transparent !important;
+                    }
+
+                    .npm__react-simple-code-editor__textarea::selection {
+                        background-color: #accef7 !important;
+                        color: transparent !important;
+                    }
+                }
+            </style>
+        </div>
+    </div><button class="react-responsive-modal-closeButton" data-testid="close-button"><svg width="28" height="28"
+            viewBox="0 0 36 36" data-testid="close-icon">
+            <path
+                d="M28.5 9.62L26.38 7.5 18 15.88 9.62 7.5 7.5 9.62 15.88 18 7.5 26.38l2.12 2.12L18 20.12l8.38 8.38 2.12-2.12L20.12 18z">
+            </path>
+        </svg></button>
+</div>
