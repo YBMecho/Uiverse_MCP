@@ -1,6 +1,6 @@
 # Uiverse MCP 工具
 
-<p align="center"><a href="README.md">English | 中文</a>
+<p align="center"><a href="README.md">English </a>| 中文
 
 一个基于 Model Context Protocol (MCP) 的工具，用于自动提取 [Uiverse.io](https://uiverse.io/) 网站上的 UI 组件代码。支持多种前端框架，包括 HTML/CSS、React、Vue、Svelte 和 Lit。
 
