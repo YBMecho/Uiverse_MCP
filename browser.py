@@ -58,6 +58,53 @@ async def _first_text_by_selectors(page, selectors: List[str]) -> str:
     return ""
 
 
+async def _detect_special_content(page) -> bool:
+    """检测页面是否包含特殊.html中的内容（HTML + TailwindCSS标签）"""
+    try:
+        # 检查是否同时包含HTML和TailwindCSS文字
+        html_present = await page.locator("text=HTML").count() > 0
+        tailwind_present = await page.locator("text=TailwindCSS").count() > 0
+        
+        # 检查特定的SVG路径（HTML图标的路径）
+        html_svg_path = "M12 18.178l4.62-1.256.623-6.778H9.026L8.822 7.89h8.626l.227-2.211H6.325l.636 6.678h7.82l-.261 2.866-2.52.667-2.52-.667-.158-1.844h-2.27l.329 3.544L12 18.178zM3 2h18l-1.623 18L12 22l-7.377-2L3 2z"
+        svg_present = await page.locator(f'path[d="{html_svg_path}"]').count() > 0
+        
+        return html_present and tailwind_present and svg_present
+    except Exception:
+        return False
+
+
+async def _click_copy_button_direct(page) -> bool:
+    """直接点击copy按钮并等待复制完成"""
+    try:
+        # 尝试多种可能的copy按钮选择器
+        copy_selectors = [
+            "button:has-text('copy')",
+            "button:has-text('Copy')",
+            "[role='button']:has-text('copy')",
+            "[role='button']:has-text('Copy')",
+            ".copy-btn",
+            ".copy-button"
+        ]
+        
+        for selector in copy_selectors:
+            try:
+                button = page.locator(selector).first
+                if await button.count() > 0:
+                    await button.wait_for(state="visible", timeout=5000)
+                    await button.click()
+                    
+                    # 等待一小段时间让复制操作完成
+                    await page.wait_for_timeout(1000)
+                    return True
+            except Exception:
+                continue
+        
+        return False
+    except Exception:
+        return False
+
+
 async def extract_html_css(url: str) -> str:
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
@@ -77,6 +124,20 @@ async def extract_html_css(url: str) -> str:
         try:
             await page.goto(url, wait_until="networkidle")
 
+            # 检查是否为特殊内容（HTML + TailwindCSS）
+            is_special_content = await _detect_special_content(page)
+            
+            if is_special_content:
+                # 如果检测到特殊内容，直接点击copy按钮
+                copy_ok = await _click_copy_button_direct(page)
+                if copy_ok:
+                    combined_code = await _read_clipboard_nonempty(page)
+                    if combined_code:
+                        # 特殊内容通常是HTML和CSS的组合，直接返回
+                        return f"### HTML+CSS（特殊内容）\n```html\n{_one_line(combined_code)}\n```"
+                
+                # 如果直接复制失败，继续使用原来的逻辑
+            
             css_ok = await _click_and_wait_copied(
                 page,
                 "button.copy-all.CSS",
