@@ -16,8 +16,8 @@
 
 1. 克隆项目：
 ```bash
-git clone <repository-url>
-cd uiverse_MPC
+git clone https://github.com/YBMecho/Uiverse_MCP.git
+cd Uiverse_MPC
 ```
 
 2. 安装依赖：

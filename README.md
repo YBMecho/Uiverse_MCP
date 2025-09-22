@@ -16,8 +16,8 @@ A tool based on Model Context Protocol (MCP) for automatically extracting UI com
 
 1. Clone the project:
 ```bash
-git clone <repository-url>
-cd uiverse_MPC
+git clone https://github.com/YBMecho/Uiverse_MCP.git
+cd Uiverse_MPC
 ```
 
 2. Install dependencies:
