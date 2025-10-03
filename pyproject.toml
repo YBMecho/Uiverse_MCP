@@ -1,0 +1,11 @@
+[project]
+name = "uiverse-mpc"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "mcp[cli]>=1.16.0",
+    "fastmcp>=2.0.0",
+    "playwright>=1.55.0",
+]
