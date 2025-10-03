@@ -29,7 +29,7 @@ A FastMCP-based code extraction tool for [Uiverse.io](https://uiverse.io/), supp
 ### 1. Clone or download the project
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/YBMecho/Uiverse_MCP.git
 cd Uiverse_MPC
 ```
 
